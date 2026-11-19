@@ -181,7 +181,7 @@ sequenceDiagram
   Student->>UI: Chọn cơ hội và nộp hồ sơ
   UI->>GW: POST /api/applications + cookie JWT
   GW->>App: POST /applications + thông tin xác thực
-  App->>App: Lấy user ID từ JWT; kiểm tra dữ liệu
+  App->>App: Lấy user ID từ JWT, kiểm tra dữ liệu
   App->>ADB: INSERT hồ sơ, kiểm tra unique user/item
   ADB-->>App: Hồ sơ đã tạo
   App-->>GW: 201 Created
